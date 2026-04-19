@@ -265,10 +265,80 @@
           </header>
         );
       };
+
+      const Sidebar = () => {
+        return (
+          <aside className="sidebar">
+            <nav className="ingredients">
+              <h3 className="ingredients-title">Ингредиенты</h3>
+              <ul className="ingredients-list">
+                <li><a href="#">Закваски для сыра</a></li>
+                <li><a href="#">Ферменты для сыра</a></li>
+                <li><a href="#">Хлористый кальций</a></li>
+                <li><a href="#">Плесень для сыра</a></li>
+                <li><a href="#">Кисломолочные закваски</a></li>
+                <li><a href="#">Красители для сыра</a></li>
+                <li><a href="#">Специи для сыра</a></li>
+              </ul>
+            </nav>
+          </aside>
+        );
+      };
+      
+      const ReceiptCard = (props) => {
+        return (
+          <div className="receipt-card">
+            <div className="receipt-photo">
+              <img src={props.img} alt="cheese" />
+            </div>
+            <div className="receipt-info">
+              <h5 className="receipt-title">{props.title}</h5>
+              <a href="#" className="link-arrow">Смотреть</a>
+            </div>
+          </div>
+        );
+      };
+
+      const Main = () => {
+        return (
+          <main className="main-column">
+            <section className="receipts">
+              <h1 className="main-title">рецепты сыров</h1>
+
+              <div className="receipt-cards">
+                <ReceiptCard
+                  title="Молодые сыры"
+                  img="uploads/Receipes-1.jpg"
+                />
+                <ReceiptCard
+                  title="Твердые сыры"
+                  img="uploads/Receipes-ard.png"
+                />
+                <ReceiptCard
+                  title="Полутвердые сыры"
+                  img="uploads/Receipes-Card3.png"
+                />
+              </div>
+            </section>
+          </main>
+        );
+      };
       
       const Run = () => {
-        return <Header />
+        return (
+          <div>
+            <Header />
+
+            <div className="container content">
+              <Sidebar />
+              <Main />
+            </div>
+            
+          </div>
+        );
       };
+      
+      
       
       ReactDOM.createRoot(container).render(<Run />);
     </script>
