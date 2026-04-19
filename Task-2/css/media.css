@@ -1,0 +1,109 @@
+@media screen and (max-width: 620px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header-main {
+    flex-direction: column;
+  }
+
+  .additions-cards {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(400px, 450px);
+  }
+
+  .nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ffooter-icon-3::after,
+  .ffooter-icon-2::after,
+  .ffooter-icon-1::after {
+    content: "";
+    width: 32px;
+    height: 32px;
+    display: block;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .pay-span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .additions-title,
+  .main-title {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .additions-cards {
+    grid-auto-rows: minmax(300px, 350px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .receipt-title {
+    font-size: 16px;
+  }
+
+  .breadcrumbs,
+  .heder-protect {
+    display: none;
+  }
+
+  .header-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .content {
+    display: block;
+  }
+
+  .icon-footer {
+    border-radius: 50%;
+    background-color: #e7e7e7;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .breadcrumbs-list a:hover,
+  .link-arrow:hover,
+  .ingredients li:hover,
+  .nav ul li:hover {
+    text-decoration: underline;
+  }
+
+  .header-btn:hover {
+    outline: 1px solid black;
+    border-radius: 5px;
+  }
+
+  .heder-number button:hover {
+    border: 1px solid black;
+    box-shadow: 2px 1px;
+  }
+
+  .additions-content a:hover {
+    text-decoration: none;
+  }
+
+  .order-btn:hover {
+    color: black;
+    background-color: transparent;
+    outline: 1px solid #fd9339;
+    box-shadow: 2px 1px;
+  }
+}
