@@ -369,6 +369,22 @@
           </main>
         );
       };
+
+      const Footer = () => {
+        return (
+          <footer>
+            <div className="footer container">
+              <div className="pay">
+                <span className="pay-span">Способы оплаты</span>
+                <span className="ffooter-icon-1"></span>
+                <span className="ffooter-icon-2"></span>
+                <span className="ffooter-icon-3"></span>
+              </div>
+              <p>г. Москва, улица Свободы 1/7</p>
+            </div>
+          </footer>
+        );
+      };
       
       const Run = () => {
         return (
@@ -379,12 +395,10 @@
               <Sidebar />
               <Main />
             </div>
-            
+            <Footer />
           </div>
         );
       };
-      
-      
       
       ReactDOM.createRoot(container).render(<Run />);
     </script>
