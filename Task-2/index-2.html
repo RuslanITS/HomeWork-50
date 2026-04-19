@@ -299,6 +299,51 @@
         );
       };
 
+      const AdditionCard = (props) => {
+        return (
+          <article className="additions-card">
+            <img src={props.img} alt={props.title} />
+            <div className="additions-content">
+              <span className="additions-text">{props.title}</span>
+              <p>{props.text}</p>
+              <a href="#">Читать далее</a>
+            </div>
+          </article>
+        );
+      };
+
+      const Additions = () => {
+        return (
+          <section className="additions">
+            <h2 className="additions-title">Последние добавленные</h2>
+
+            <div className="additions-cards">
+              <AdditionCard
+                img="uploads/image4.png"
+                title="Сырная тарелка"
+                text="Особенно характерно наличие дырочек разных размеров..."
+              />
+              <AdditionCard
+                img="uploads/im2.png"
+                title="Откуда в сыре дырки?"
+                text="Особенно характерно наличие в структуре..."
+              />
+              <AdditionCard
+                img="uploads/im3.png"
+                title="Сырная диета"
+                text="Особенно характерно наличие дырочек разных размеров..."
+              />
+            </div>
+
+            <div className="order">
+              <button className="order-btn" type="button">
+                Загрузить еще
+              </button>
+            </div>
+          </section>
+        );
+      };
+
       const Main = () => {
         return (
           <main className="main-column">
@@ -320,6 +365,7 @@
                 />
               </div>
             </section>
+            <Additions />
           </main>
         );
       };
