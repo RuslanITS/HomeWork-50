@@ -10,7 +10,42 @@
   </head>
   <body>
     
-    <div id="app"></div>
+    <div id="app" class="app"></div>
+    
+    <script type="text/babel">
+      const MoveCinema = (props) => {
+        return (
+          <div className="MoveCinema">
+            <h1>{props.name}</h1>
+            <p>Year of manufacture : {props.year}</p>
+            <img src={props.images} alt={props.name} />
+          </div>
+        );
+      };й
+
+      const RenderCinema = (
+        <div className="render-box">
+          <MoveCinema
+            name={'Avengers: Secret Wars'}
+            year={2026}
+            images={'https://upload.wikimedia.org/wikipedia/ru/7/7a/Avengers_Secret_Wars_logo.jpg'}
+          />
+          <MoveCinema
+            name={'The Batman Part II'}
+            year={2026}
+            images={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAhSdROBUgpUxhDEGpOGcQ-oVCqEuTwJwRhg&s'}
+          />
+          <MoveCinema
+            name={'Dune: Messiah'}
+            year={2026}
+            images={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC0ttiTkX9e08EKaISPIdzu75-4dBH4S4QXA&s'}
+          />
+        </div>
+      );
+
+      const container = document.getElementById('app');
+
+      ReactDOM.createRoot(container).render(RenderCinema);
     
     </script>
   </body>
